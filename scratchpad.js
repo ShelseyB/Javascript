@@ -27,7 +27,7 @@ function fib(n) {
     value = left.value + right.value;
     var p = document.createElement('p');
     p.textContent = 'n = ' + n + ', Fib = ' + value + ';';
-    div.appendChild(p)
+    div.appendChild(p);
     div.appendChild(left.html);
     div.appendChild(right.html);
   }
@@ -144,12 +144,46 @@ document.title = 'Recursive Functions';
 var heading = document.createElement('h1');
 heading.textContent = 'Recursive Functions';
 document.querySelector('body').appendChild(heading);
-var fibnode = document.createElement('div');
-document.querySelector('body').appendChild(fibnode);
-var pellnode = document.createElement('div');
-document.querySelector('body').appendChild(pellnode);
-var tribnode = document.createElement('div');
-document.querySelector('body').appendChild(tribnode);
-fib1(5, fibnode);
-pell1(5, pellnode);
-trib1(7, tribnode);
+
+function createDiv()
+{
+  var divName = document.createElement('div');
+  document.querySelector('body').appendChild(divName);
+  return divName;
+}
+
+function createLink(text, URL, list)
+{
+  var link = document.createElement('a');
+  link.setAttribute('href', URL);
+  link.textContent(text);
+  list.appendChild(link);
+}
+
+var fibnode = createDiv();
+var pellnode = createDiv();
+var tribnode = createDiv();
+
+fib1(11, fibnode);
+pell1(11, pellnode);
+trib1(11, tribnode);
+
+var paragraph = document.createElement('p');
+paragraph.textContent('For an explanation of our number sequences:');
+document.appendChild(paragraph);
+
+var linkList = document.createElement('ul');
+document.appendChild(linkList);
+
+var list1 = document.createElement('li');
+var list2 = document.createElement('li');
+var list3 = document.createElement('li');
+
+createLink("Fibonacci", 'https://oeis.org/A000045', list1);
+createLink("Pell", 'https://oeis.org/A000129', list2);
+createLink("Fibonacci", 'https://oeis.org/A000073', list3);
+
+linkList.appendChild(list1);
+linkList.appendChild(list2);
+linkList.appendChild(list3);
+
