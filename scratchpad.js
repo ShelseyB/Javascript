@@ -79,7 +79,7 @@ function trib(n)
 {
   var value;
   var div = document.createElement('div');
-  div.setAttribute('class', 'pell');
+  div.setAttribute('class', 'trib');
   if (n < 3)
   {
     if (n === 0 || n === 1) {

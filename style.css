@@ -3,8 +3,18 @@
 	width: 20000px;
 }
 
+#pell {
+	display: inline-block;
+	width: 20000px;
+}
+#trib {
+	display: inline-block;
+	width: 20000px;
+}
+
 .fib {
 	background-color: rgba(0,0,255,0.1);
+	text-align: center;
 }
 
 .fib-left {
@@ -25,4 +35,54 @@
 
 .body {
     font-family: monospace;
+}
+
+.pell {
+	background-color: rgba(0,0,255,0.1);
+	text-align: center;
+}
+
+.pellpellleft {
+	float: left;
+	display: inline-block;
+	text-align: center;
+
+	margin-right: 4px;
+}
+
+.pellpellright {
+	float: right;
+	display: inline-block;
+	text-align: center;
+
+	margin-left: 4px;
+}
+
+.trib {
+	background-color: rgba(0,0,255,0.1);
+	text-align: center;
+}
+
+.tribtribleft {
+	float: left;
+	display: inline-block;
+	text-align: center;
+
+	margin-right: 4px;
+}
+
+.tribtribright {
+	float: right;
+	display: inline-block;
+	text-align: center;
+
+	margin-left: 4px;
+}
+
+.tribtribmiddle {
+	float: middle;
+	display: inline-block;
+	text-align: center;
+
+	margin-left: 4px;
 }
