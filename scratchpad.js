@@ -12,7 +12,7 @@ function fib(n) {
     }
     var p = document.createElement('p');
     p.textContent = 'n = ' + n + ', Fib = ' + value + ';';
-    div.appendChild(p)
+    div.appendChild(p);
   } 
   else {
     //left
@@ -168,12 +168,16 @@ fib1(11, fibnode);
 pell1(11, pellnode);
 trib1(11, tribnode);
 
+var linkListDiv = document.createElement('div');
+document.querySelector('body').appendChild(linkListDiv);
+
 var paragraph = document.createElement('p');
 paragraph.textContent('For an explanation of our number sequences:');
-document.appendChild(paragraph);
+document.querySelector('body').appendChild(paragraph);
+
 
 var linkList = document.createElement('ul');
-document.appendChild(linkList);
+document.querySelector('body').appendChild(linkList);
 
 var list1 = document.createElement('li');
 var list2 = document.createElement('li');
@@ -187,3 +191,6 @@ linkList.appendChild(list1);
 linkList.appendChild(list2);
 linkList.appendChild(list3);
 
+var pg = document.createElement('p');
+pg.textContent("I just want this to show up on my page");
+document.querySelector('body').appendChild(pg);
