@@ -152,13 +152,7 @@ function createDiv()
   return divName;
 }
 
-function createLink(text, URL, list)
-{
-  var link = document.createElement('a');
-  link.setAttribute('href', URL);
-  link.textContent(text);
-  list.appendChild(link);
-}
+
 
 var fibnode = createDiv();
 var pellnode = createDiv();
@@ -172,7 +166,7 @@ var linkListDiv = document.createElement('div');
 document.querySelector('body').appendChild(linkListDiv);
 
 var paragraph = document.createElement('p');
-paragraph.textContent('For an explanation of our number sequences:');
+paragraph.textContent="For more information on our number sequences:";
 document.querySelector('body').appendChild(paragraph);
 
 
@@ -183,14 +177,29 @@ var list1 = document.createElement('li');
 var list2 = document.createElement('li');
 var list3 = document.createElement('li');
 
-createLink("Fibonacci", 'https://oeis.org/A000045', list1);
-createLink("Pell", 'https://oeis.org/A000129', list2);
-createLink("Fibonacci", 'https://oeis.org/A000073', list3);
-
 linkList.appendChild(list1);
 linkList.appendChild(list2);
 linkList.appendChild(list3);
 
-var pg = document.createElement('p');
-pg.textContent("I just want this to show up on my page");
-document.querySelector('body').appendChild(pg);
+var link = document.createElement('a');
+link.setAttribute('href', 'https://oeis.org/A000045');
+link.textContent='Fibonacci';
+list1.appendChild(link);
+
+var link2 = document.createElement('a');
+link2.setAttribute('href', 'https://oeis.org/A000129');
+link2.textContent='Pell';
+list2.appendChild(link2);
+
+var link3 = document.createElement('a');
+link3.setAttribute('href', 'https://oeis.org/A000073');
+link3.textContent='Tribbonacci';
+list3.appendChild(link3);
+
+/*createLink("Fibonacci", 'https://oeis.org/A000045', list1);
+createLink("Pell", 'https://oeis.org/A000129', list2);
+createLink("Fibonacci", 'https://oeis.org/A000073', list3);*/
+
+
+
+
