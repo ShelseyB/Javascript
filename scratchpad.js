@@ -124,6 +124,11 @@ function trib(n)
 }
 function fib1(n, node)
 {
+  var fibTree = node.querySelector('div.fib');
+  if (fibTree)
+  {
+    node.removeChild(fibTree);
+  }
   var tree = fib(n);
   node.appendChild(tree.html);
   node.setAttribute('id', 'fib');
@@ -154,13 +159,13 @@ function createDiv()
 
 
 
-var fibnode = createDiv();
+/*var fibnode = createDiv();
 var pellnode = createDiv();
 var tribnode = createDiv();
 
 fib1(11, fibnode);
 pell1(11, pellnode);
-trib1(11, tribnode);
+trib1(11, tribnode);*/
 
 var linkListDiv = document.createElement('div');
 document.querySelector('body').appendChild(linkListDiv);
@@ -196,10 +201,14 @@ link3.setAttribute('href', 'https://oeis.org/A000073');
 link3.textContent='Tribbonacci';
 list3.appendChild(link3);
 
-/*createLink("Fibonacci", 'https://oeis.org/A000045', list1);
-createLink("Pell", 'https://oeis.org/A000129', list2);
-createLink("Fibonacci", 'https://oeis.org/A000073', list3);*/
+function fibButton(me){
+  var value = me.parentNode.querySelector('input').value;
+  fib1(value, me.parentNode.parentNode);
+}
 
-
-
-
+function fibSlider(me)
+{
+  var form = me.parentNode;
+  var button = form.querySelector('button');
+  button.textContent = "Fib("+me.value+")";
+}
