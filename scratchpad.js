@@ -129,6 +129,7 @@ function fib1(n, node)
   {
     node.removeChild(fibTree);
   }
+  n = parseInt(n);
   var tree = fib(n);
   node.appendChild(tree.html);
   node.setAttribute('id', 'fib');
