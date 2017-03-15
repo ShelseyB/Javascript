@@ -133,8 +133,22 @@ function fib1(n, node)
   var tree = fib(n);
   node.appendChild(tree.html);
   node.setAttribute('id', 'fib');
-  var nodeWidth = n * 100;
-  document.getElementById('fib').setAttribute("style","width:" + nodeWidth);
+  var nodeWidth;
+  if (n <= 1)
+  {
+    nodeWidth = 100;
+  }
+  else if (n <= 7)
+  {
+    nodeWidth = Math.pow((n*7), 2) +10;
+  }
+  else
+  {
+    nodeWidth = Math.pow((n*10), 2) - 1000;
+  }
+  
+  var width1 = "width:" + nodeWidth + "px";
+  document.getElementById('fib').setAttribute("style",width1);
 }
 function pell1(n, node)
 {
@@ -147,6 +161,22 @@ function pell1(n, node)
   var tree = pell(n);
   node.appendChild(tree.html);
   node.setAttribute('id', 'pell');
+    var nodeWidth;
+  if (n <= 1)
+  {
+    nodeWidth = 100;
+  }
+  else if (n <= 7)
+  {
+    nodeWidth = Math.pow((n*7), 2) + 10;
+  }
+  else
+  {
+    nodeWidth = Math.pow((n*10), 2) - 700;
+  }
+  
+  var width1 = "width:" + nodeWidth + "px";
+  document.getElementById('pell').setAttribute("style",width1);
 }
 function trib1(n, node)
 {
@@ -159,6 +189,22 @@ function trib1(n, node)
   var tree = trib(n);
   node.appendChild(tree.html);
   node.setAttribute('id', 'trib');
+    var nodeWidth;
+  if (n <= 1)
+  {
+    nodeWidth = 200;
+  }
+  else if (n <= 7)
+  {
+    nodeWidth = Math.pow((n*7), 2);
+  }
+  else
+  {
+    nodeWidth = Math.pow((n*10), 2)- 7000;
+  }
+  
+  var width1 = "width:" + nodeWidth + "px";
+  document.getElementById('trib').setAttribute("style",width1);
 }
 document.title = 'Recursive Functions';
 var heading = document.createElement('h1');
